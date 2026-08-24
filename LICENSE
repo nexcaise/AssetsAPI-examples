@@ -1,0 +1,165 @@
+CUSTOM PROPRIETARY / SOURCE-AVAILABLE LICENSE (CPNC) v1.0
+
+SPDX-License-Identifier: LicenseRef-CPNC-1.0
+Copyright (c) 2026 Nexcaise Team
+All Rights Reserved.
+
+1. DEFINITIONS / DEFINISI
+
+[EN]
+"Work" means any software, source code, mod, plugin, addon, asset, document,
+artwork, configuration, or any other material distributed under this License.
+
+"Author" means the original creator or copyright holder of the Work.
+
+"User" means any individual or entity that uses the Work.
+
+[ID]
+"Karya" berarti perangkat lunak, kode sumber, mod, plugin, addon, aset, dokumen,
+karya seni, konfigurasi, atau materi lain apa pun yang didistribusikan di bawah
+Lisensi ini.
+
+"Pembuat" berarti pencipta asli atau pemegang hak cipta dari Karya.
+
+"Pengguna" berarti individu atau entitas yang menggunakan Karya.
+
+2. GRANT OF LICENSE / PEMBERIAN LISENSI
+
+[EN]
+This Work is licensed, not sold.
+Permission is granted to use, modify, and create derivative works of the Work
+strictly for personal and/or internal use, subject to the terms of this License.
+
+[ID]
+Karya ini dilisensikan, bukan dijual.
+Izin diberikan untuk menggunakan, memodifikasi, dan membuat karya turunan dari
+Karya ini secara terbatas untuk penggunaan pribadi dan/atau internal, dengan
+tunduk pada ketentuan Lisensi ini.
+
+3. ATTRIBUTION REQUIREMENT / KEWAJIBAN ATRIBUSI
+
+[EN]
+Any public use, distribution, or sharing of the Work or any derivative work
+must include clear, visible, and appropriate credit to the original Author.
+
+The credit must:
+- Include the Author’s name (e.g., "Nexcaise Team")
+- Not imply endorsement by the Author
+- Be placed in a reasonable and visible location (e.g., README, credits section,
+  or UI)
+
+[ID]
+Setiap penggunaan publik, distribusi, atau pembagian Karya maupun karya turunan
+wajib menyertakan kredit yang jelas, terlihat, dan pantas kepada Pembuat asli.
+
+Kredit harus:
+- Mencantumkan nama Pembuat (misalnya: "Nexcaise Team")
+- Tidak menyiratkan dukungan resmi dari Pembuat
+- Ditempatkan di lokasi yang wajar dan mudah terlihat (misalnya README, bagian
+  kredit, atau UI)
+
+4. RESTRICTIONS / PEMBATASAN
+
+[EN]
+The User shall NOT:
+
+a. Claim authorship or ownership of the Work or any part of it.
+b. Remove, alter, or obscure any copyright, license, or attribution notice.
+c. Distribute the Work or any derivative work without proper attribution as
+   defined in this License.
+d. Sell, sublicense, rent, lease, or commercially exploit the Work without
+   explicit written permission from the Author.
+e. Use the Work in any way that violates applicable laws or regulations.
+
+[ID]
+Pengguna DILARANG untuk:
+
+a. Mengklaim kepemilikan atau kepengarangan atas Karya atau bagian mana pun
+   darinya.
+b. Menghapus, mengubah, atau menyembunyikan pemberitahuan hak cipta, lisensi,
+   atau atribusi.
+c. Mendistribusikan Karya atau karya turunan tanpa atribusi yang sesuai
+   sebagaimana ditentukan dalam Lisensi ini.
+d. Menjual, mensublisensikan, menyewakan, atau mengeksploitasi Karya secara
+   komersial tanpa izin tertulis dari Pembuat.
+e. Menggunakan Karya dengan cara yang melanggar hukum yang berlaku.
+
+5. DERIVATIVE WORKS / KARYA TURUNAN
+
+[EN]
+Derivative works are permitted only if:
+
+- They are used for personal or internal purposes, OR
+- If distributed publicly, they comply fully with the Attribution Requirement
+  and all terms of this License.
+
+The User must clearly state that the derivative work is not an official version
+of the original Work.
+
+[ID]
+Karya turunan diperbolehkan hanya jika:
+
+- Digunakan untuk keperluan pribadi atau internal, ATAU
+- Jika didistribusikan secara publik, harus sepenuhnya mematuhi kewajiban
+  atribusi dan seluruh ketentuan Lisensi ini.
+
+Pengguna wajib menyatakan dengan jelas bahwa karya turunan tersebut bukan versi
+resmi dari Karya asli.
+
+6. OWNERSHIP / KEPEMILIKAN
+
+[EN]
+All rights, title, and interest in and to the Work remain exclusively with the
+Author.
+This License does not grant ownership rights to the User.
+
+[ID]
+Seluruh hak, kepemilikan, dan kepentingan atas Karya tetap sepenuhnya menjadi
+milik Pembuat.
+Lisensi ini tidak memberikan hak kepemilikan apa pun kepada Pengguna.
+
+7. TERMINATION / PENGAKHIRAN
+
+[EN]
+This License shall automatically terminate if the User violates any of its
+terms.
+Upon termination, the User must cease all use and delete all copies of the Work.
+
+[ID]
+Lisensi ini akan otomatis berakhir apabila Pengguna melanggar salah satu
+ketentuannya.
+Setelah pengakhiran, Pengguna wajib menghentikan penggunaan dan menghapus
+seluruh salinan Karya.
+
+8. DISCLAIMER OF WARRANTY / PENAFIAN JAMINAN
+
+[EN]
+The Work is provided "as is", without warranty of any kind, express or implied.
+The Author shall not be liable for any damages arising from the use or inability
+to use the Work.
+
+[ID]
+Karya disediakan "sebagaimana adanya", tanpa jaminan dalam bentuk apa pun, baik
+tersurat maupun tersirat.
+Pembuat tidak bertanggung jawab atas kerusakan atau kerugian yang timbul akibat
+penggunaan atau ketidakmampuan menggunakan Karya.
+
+9. SCOPE / RUANG LINGKUP
+
+[EN]
+This License applies to all types of Work, including but not limited to software,
+source code, mods, assets, and non-software materials.
+
+[ID]
+Lisensi ini berlaku untuk semua jenis Karya, termasuk namun tidak terbatas pada
+perangkat lunak, kode sumber, mod, aset, dan materi non-perangkat lunak.
+
+10. GOVERNING TERMS / KETENTUAN TAMBAHAN
+
+[EN]
+In the event of any conflict between terms, the most restrictive interpretation
+shall apply.
+
+[ID]
+Apabila terjadi konflik antar ketentuan, interpretasi yang paling ketat yang
+berlaku.

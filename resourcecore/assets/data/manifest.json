@@ -1,0 +1,9 @@
+{
+  "type": "preload-native",
+  "name": "resourcecore",
+  "description": "resourcecore",
+  "entry": "libresourcecore.so",
+  "author": "NexCaise Devs",
+  "icon": "",
+  "version": "1.0.1"
+}
