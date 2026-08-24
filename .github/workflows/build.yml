@@ -41,6 +41,45 @@ jobs:
           ndk-version: r28c
           add-to-path: true
 
+      - name: Configure CMake
+        working-directory: resourcecore
+        run: |
+          cmake \
+            -DCMAKE_TOOLCHAIN_FILE=${{ steps.ndk.outputs.ndk-path }}/build/cmake/android.toolchain.cmake \
+            -DANDROID_ABI=${{ env.ANDROID_ABI }} \
+            -DANDROID_PLATFORM=${{ env.ANDROID_PLATFORM }} \
+            -DCMAKE_BUILD_TYPE=Release \
+            -B build \
+            -S .
+
+      - name: Build
+        working-directory: resourcecore
+        run: cmake --build build --config Release -j"$(nproc)"
+
+      - name: Prepare release package
+        working-directory: resourcecore
+        run: |
+          set -e
+          rm -rf dist
+          mkdir -p dist/package
+
+          cp build/*.so dist/package/
+
+          if [ -d assets/data ]; then
+            cp -a assets/data/. dist/package/
+          fi
+
+          cd dist/package
+          zip -r "../${PACKAGE_NAME}.zip" .
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ExampleAssetsAPI-package-${{ github.sha }}
+          path: |
+            resourcecore/dist/*.zip
+          retention-days: 1
+
       # ------------------
       # C++ Example
       # ------------------
