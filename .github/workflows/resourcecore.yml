@@ -1,4 +1,4 @@
-name: Build
+name: Build ResourceCore
 
 on:
   push:
@@ -19,12 +19,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        target:
-          - aarch64-linux-android
-
     steps:
       - uses: actions/checkout@v4
 
@@ -40,10 +34,6 @@ jobs:
         with:
           ndk-version: r28c
           add-to-path: true
-
-      # ------------------
-      # C++ Example
-      # ------------------
 
       - name: Configure CMake
         working-directory: resourcecore
