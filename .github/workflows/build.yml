@@ -1,0 +1,106 @@
+name: Build
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  ANDROID_ABI: arm64-v8a
+  ANDROID_PLATFORM: android-26
+  PACKAGE_NAME: example_assetsapi
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        target:
+          - aarch64-linux-android
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Setup Android NDK
+        id: ndk
+        uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r28c
+          add-to-path: true
+
+      # ------------------
+      # C++ Example
+      # ------------------
+
+      - name: Configure CMake
+        working-directory: examples/cpp
+        run: |
+          cmake \
+            -DCMAKE_TOOLCHAIN_FILE=${{ steps.ndk.outputs.ndk-path }}/build/cmake/android.toolchain.cmake \
+            -DANDROID_ABI=${{ env.ANDROID_ABI }} \
+            -DANDROID_PLATFORM=${{ env.ANDROID_PLATFORM }} \
+            -DCMAKE_BUILD_TYPE=Release \
+            -B build \
+            -S .
+
+      - name: Build
+        working-directory: examples/cpp
+        run: cmake --build build --config Release -j"$(nproc)"
+
+      - name: Prepare release package
+        working-directory: examples/cpp
+        run: |
+          set -e
+          rm -rf dist
+          mkdir -p dist/package
+
+          cp build/*.so dist/package/
+
+          if [ -d assets/data ]; then
+            cp -a assets/data/. dist/package/
+          fi
+
+          cd dist/package
+          zip -r "../${PACKAGE_NAME}.zip" .
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ExampleAssetsAPI-package-${{ github.sha }}
+          path: |
+            examples/cpp/dist/*.zip
+          retention-days: 1
+
+      # ------------------
+      # Rust Example
+      # ------------------
+
+      - name: Setup Rust
+        run: rustup update stable
+      - name: Install cross-compilation tools
+        uses: taiki-e/setup-cross-toolchain-action@v1
+        with:
+          target: ${{ matrix.target }} 
+      - name: build
+        run: cargo build --profile githubci
+        working-directory: examples/rust
+
+      - name: Upload Rust Library
+        uses: actions/upload-artifact@v4
+        with:
+          name: example-assetsapi-${{ matrix.target }}
+          path: |
+            examples/rust/target/${{ matrix.target }}/githubci/*.so

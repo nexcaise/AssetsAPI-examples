@@ -1,0 +1,9 @@
+{
+  "type": "preload-native",
+  "name": "example_assetsapi",
+  "description": "example_assetsapi",
+  "entry": "libexample_assetsapi.so",
+  "author": "NexCaise Devs",
+  "icon": "",
+  "version": "1.0.1"
+}

@@ -1,0 +1,32 @@
+[package]
+name = "example-assetsapi"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cxx = "1.0.128"
+libc = "0.2.159"
+log = "0.4.22"
+ctor = "0.4.1"
+ndk = "0.9.0"
+ndk-sys = "0.6.0"
+
+[profile.release]
+panic = "abort"
+
+[profile.githubci]
+inherits = "release"
+strip = true
+lto = true 
+codegen-units = 1 
+debug = false
+panic = "abort"
+
+[lib]
+crate-type = ["cdylib"]
+
+[build-dependencies]
+cc = "1.1.24"
+[lints.clippy]
+indexing_slicing = "deny"
+unwrap_used = "deny"
